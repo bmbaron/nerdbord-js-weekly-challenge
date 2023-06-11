@@ -1,0 +1,119 @@
+body,html {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+.left-side{
+    height: 250px;
+    width: 350px;
+    min-width: 340px;
+    max-width: 340px;
+    margin-top: -100px;
+    margin-left: 118px;
+}
+.left-side .large-text {
+    font-size: 48px;
+    line-height: 55px;
+    font-weight: 500;
+}
+.left-side .small-text {
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 300;
+}
+.right-side {
+    width: 100%;
+    margin-right: 20px;
+    height: 600px;
+    background-image: url('https://s3-alpha-sig.figma.com/img/ef91/480d/87af784bb7e4922b9b9f833f1b204ebe?Expires=1687132800&Signature=P6ZYBusglb~EyGrCTI0pXZcwLUSMMtv6boDRor6sgo1xtaXVI0eeOSyEV1reo2hCEUhIw5pnDbkoh~RsgZj~Nrn~nPPKMdglq9TC52Jdnpey52iVBmqwbHExzRUZ4VOGTqBIKcekZAF5dZn4BHsUpkmcye57dfhmG4Vcf-pBcIaiV~LHt8or8c8TiNqNeqPivVcJQahBM3yw1L2mnn4-RT6vQa5Ylral~ZYyaNRcorR8WyH7qNXVMH3GoxuuR~mYgXf0C98KnvwwGVBMAaFj6goer2V79hUOzOi~3rS1vGp6mqtKsQDxBm2r8SXQpCQf8baCdnrDqE8Qk3rsrzbuyA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.right-side .hover-text {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #E8E6E2;
+    background: rgba(0, 0, 0, 0.6);
+    gap: -50px;
+    transition: all ease-in-out 500ms;
+}
+.right-side .hover-text:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.right-side .hover-text-large {
+    font-size: 25px;
+    line-height: 38px;
+    margin: 0;
+    font-weight: 500;
+}
+.right-side .hover-text-small {
+    font-size: 16px;
+    line-height: 27px;
+    margin: 0;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-container {
+        padding-top: 30px;
+        height: 90vh;
+    }
+    .left-side {
+        width: 400px;
+        margin-top: -300px;
+        margin-left: 30px;
+    }
+    .right-side {
+        margin-top: 100px;
+        height: 90vh;
+        background-size: cover;
+        background-position-x: -350px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .main-container {
+        flex-direction: column-reverse;
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 100vh;
+        overflow: scroll;
+    }
+    .left-side {
+        height: 300px;
+        margin: auto;
+        margin-left: 0;
+    }
+    .right-side {
+        min-height: 500px;
+        margin-top: 0;
+        background-size: cover;
+        background-position-x: -100px;
+        background-position-y: unset;
+        margin-right: unset;
+    }
+    .right-side .hover-text {
+        pointer-events: none;
+    }
+}
